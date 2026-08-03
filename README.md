@@ -1,95 +1,99 @@
 ﻿# Muhammad Bilal Portfolio
 
-A professional developer portfolio for Muhammad Bilal, built to attract Fiverr clients, freelance clients, and job opportunities.
+A production-ready developer portfolio for Muhammad Bilal, focused on freelance clients, Fiverr leads, and frontend or AI chatbot opportunities. The site keeps a premium dark SaaS look with responsive layouts, animated interactions, project previews, and honest placeholder contact details where final profile links are still missing.
+
+## Features
+
+- Premium dark SaaS portfolio design
+- Responsive navbar with mobile menu
+- Hero section with animated typing roles
+- Professional profile photo placeholder
+- Animated CTA buttons and section reveals
+- Project cards with optimized lazy-loaded screenshots
+- Technology badges and feature lists
+- Disabled live demo buttons for undeployed projects
+- GitHub buttons for project source links
+- Skills section with animated progress bars
+- Improved experience and education timeline
+- Premium contact form with client-side validation
+- Fiverr, GitHub, LinkedIn, and email contact links
+- Open Graph image, favicon, title, and meta description
+- Mobile-first spacing and touch-friendly controls
+- Back to Top button and freelance availability badge
 
 ## Tech Stack
 
 - React
-- Vite-powered Sites/Vinext app
 - Tailwind CSS
 - React Router
 - Framer Motion
 - Lucide React icons
+- Vite-powered Sites/Vinext app
 
-## Sections Included
-
-- Responsive navbar with mobile menu
-- Hero section with technology badges
-- About section
-- Skills grouped by category
-- Project showcase with feature lists and technology tags
-- Services
-- Experience and education timeline
-- Contact form with client-side validation
-- Footer with quick links and social placeholders
-
-## Run Locally
+## Installation
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL shown in the terminal.
+Open the local URL shown in the terminal. In this workspace the current preview has been running on:
 
-## Build
+```text
+http://127.0.0.1:5173
+```
+
+## Production Build
 
 ```bash
 npm run build
 ```
 
-## Add Future Projects
+## Deployment
 
-Project content lives in `data/portfolio.ts`. To add a new project, add another object to the `projects` array with:
+### Vercel
 
-- `title`
-- `type`
-- `description`
-- `features`
-- `technologies`
-- `liveLabel`
-- `codeHref`
-- `icon`
+1. Push this project to GitHub.
+2. Import the repository in Vercel.
+3. Keep the build command as `npm run build`.
+4. Deploy after the build succeeds.
 
-The project section will render it automatically.
+### Sites
 
-## Update Contact Details
+This project includes `.openai/hosting.json` for Sites deployment. Build first, then publish through the Sites deployment flow.
+
+## Screenshots
+
+Project preview assets are stored in `public/projects/`:
+
+- `br-chat-ai.svg`
+- `medibook-ai.svg`
+- `react-business-website.svg`
+
+Replace these with real exported screenshots from the deployed applications when final production screenshots are available. Keep the same filenames or update `data/portfolio.ts`.
+
+## Updating Projects
+
+Project content lives in `data/portfolio.ts`. Add or edit objects in the `projects` array to update:
+
+- Title
+- Type
+- Description
+- Features
+- Technologies
+- Screenshot path
+- Live demo URL
+- GitHub URL
+
+Leave `liveHref` empty when a project has not been deployed; the site will show a disabled live demo button.
+
+## Updating Contact Details
 
 Replace the clearly labeled placeholders in `data/portfolio.ts`:
 
 - Fiverr profile URL
 - LinkedIn profile URL
 - Email address
-- Resume PDF path
+- Resume PDF path if needed
 
 Place the final resume PDF in `public/` and update the navbar link if the filename changes.
-
-## Deploy on Vercel
-
-1. Push this project to GitHub.
-2. Import the repository in Vercel.
-3. Use the default build command: `npm run build`.
-4. Deploy after the build succeeds.
-
-## Files Created or Updated
-
-- `app/page.tsx`
-- `app/layout.tsx`
-- `app/globals.css`
-- `components/Navbar.tsx`
-- `components/Footer.tsx`
-- `components/Reveal.tsx`
-- `components/Ui.tsx`
-- `sections/HeroSection.tsx`
-- `sections/AboutSection.tsx`
-- `sections/SkillsSection.tsx`
-- `sections/ProjectsSection.tsx`
-- `sections/ServicesSection.tsx`
-- `sections/TimelineSection.tsx`
-- `sections/ContactSection.tsx`
-- `data/portfolio.ts`
-- `hooks/useContactForm.ts`
-- `components/PortfolioApp.tsx`
-- `assets/`
-- `public/favicon.svg`
-- `public/resume-placeholder.pdf`

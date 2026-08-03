@@ -1,15 +1,16 @@
 ﻿import {
+  BadgeDollarSign,
   Bot,
   BrainCircuit,
   BriefcaseBusiness,
   Code2,
-  Database,
   ExternalLink,
   GitBranch,
   Globe2,
   GraduationCap,
   LayoutDashboard,
   Mail,
+  MessageCircle,
   Rocket,
   ServerCog,
   ShieldCheck,
@@ -26,34 +27,33 @@ export const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const techBadges = [
-  "React",
-  "JavaScript",
-  "Tailwind CSS",
-  "Node.js",
-  "MongoDB",
-  "AI Integration",
-];
+export const typingRoles = ["Frontend Developer", "React JS Developer", "AI Chatbot Developer"];
+
+export const techBadges = ["React", "JavaScript", "Tailwind CSS", "Node.js", "MongoDB", "AI Integration"];
 
 export const skillGroups = [
   {
     title: "Frontend",
     icon: Code2,
+    progress: 92,
     skills: ["HTML", "CSS", "JavaScript", "React JS", "Next.js", "Tailwind CSS", "Bootstrap", "TypeScript"],
   },
   {
     title: "Backend & APIs",
     icon: ServerCog,
+    progress: 78,
     skills: ["Node.js", "Express.js", "REST APIs", "MongoDB", "JWT Authentication"],
   },
   {
     title: "AI & Automation",
     icon: BrainCircuit,
+    progress: 84,
     skills: ["OpenAI API", "AI Chatbots", "ManyChat", "Lead Capture Automation", "Business Workflow Automation"],
   },
   {
     title: "Tools",
     icon: LayoutDashboard,
+    progress: 88,
     skills: ["Git", "GitHub", "VS Code", "Postman", "Vercel"],
   },
 ];
@@ -64,18 +64,13 @@ export const projects = [
     type: "Full-Stack AI Chatbot Platform",
     description:
       "A custom AI chatbot platform for businesses that provides intelligent customer support, captures leads, manages conversations, and includes a secure admin dashboard.",
-    features: [
-      "AI-powered responses",
-      "Lead capture",
-      "Admin dashboard",
-      "Conversation management",
-      "Knowledge base",
-      "Secure authentication",
-      "Responsive design",
-    ],
+    features: ["AI-powered responses", "Lead capture", "Admin dashboard", "Conversation management", "Knowledge base", "Secure authentication", "Responsive design"],
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "OpenAI API", "Tailwind CSS"],
+    screenshot: "/projects/br-chat-ai.svg",
+    screenshotAlt: "BR Chat AI dashboard preview screenshot",
+    liveHref: "",
+    githubHref: "#contact",
     liveLabel: "Live Demo Soon",
-    codeHref: "#contact",
     icon: Bot,
   },
   {
@@ -83,17 +78,13 @@ export const projects = [
     type: "MERN Healthcare Appointment Platform",
     description:
       "A full-stack healthcare appointment platform with secure registration, login, doctor listings, appointment booking, protected routes, and MongoDB Atlas integration.",
-    features: [
-      "User authentication",
-      "Doctor listings",
-      "Appointment booking",
-      "Protected routes",
-      "MongoDB Atlas",
-      "Responsive healthcare UI",
-    ],
+    features: ["User authentication", "Doctor listings", "Appointment booking", "Protected routes", "MongoDB Atlas", "Responsive healthcare UI"],
     technologies: ["React", "Node.js", "Express", "MongoDB Atlas", "JWT", "Tailwind CSS"],
+    screenshot: "/projects/medibook-ai.svg",
+    screenshotAlt: "MediBook AI appointment platform preview screenshot",
+    liveHref: "",
+    githubHref: "https://github.com/Bilal-Ranjha/Medibook-ai",
     liveLabel: "Live Demo Soon",
-    codeHref: "https://github.com/Bilal-Ranjha/Medibook-ai",
     icon: ShieldCheck,
   },
   {
@@ -103,8 +94,11 @@ export const projects = [
       "A modern React business website with responsive design, reusable components, contact forms, and clean UI for service-focused businesses.",
     features: ["Reusable sections", "Contact forms", "Responsive layout", "Clean UI", "Fast loading"],
     technologies: ["React", "Tailwind CSS", "JavaScript"],
+    screenshot: "/projects/react-business-website.svg",
+    screenshotAlt: "React business website preview screenshot",
+    liveHref: "",
+    githubHref: "#contact",
     liveLabel: "Live Demo Soon",
-    codeHref: "#contact",
     icon: Globe2,
   },
 ];
@@ -119,7 +113,7 @@ export const services = [
 ];
 
 export const socialLinks = [
-  { label: "Fiverr", href: "#contact", icon: ExternalLink, note: "Add Fiverr profile URL" },
+  { label: "Fiverr", href: "#contact", icon: BadgeDollarSign, note: "Add Fiverr profile URL" },
   { label: "GitHub", href: "https://github.com/Bilal-Ranjha", icon: GitBranch, note: "Bilal-Ranjha" },
   { label: "LinkedIn", href: "#contact", icon: ExternalLink, note: "Add LinkedIn profile URL" },
   { label: "Email", href: "mailto:your-email@example.com", icon: Mail, note: "Replace with your email" },
@@ -130,14 +124,7 @@ export const timeline = [
     title: "Freelance Frontend Developer",
     meta: "October 2022 - Present",
     icon: BriefcaseBusiness,
-    points: [
-      "Build responsive interfaces",
-      "Develop React applications",
-      "Integrate APIs",
-      "Create reusable components",
-      "Fix frontend issues",
-      "Deliver client-focused solutions",
-    ],
+    points: ["Build responsive interfaces", "Develop React applications", "Integrate APIs", "Create reusable components", "Fix frontend issues", "Deliver client-focused solutions"],
   },
   {
     title: "Matric - Science Group",
@@ -151,6 +138,11 @@ export const timeline = [
     icon: GraduationCap,
     points: ["Continued education alongside practical web development and freelancing growth."],
   },
+];
+
+export const contactHighlights = [
+  { label: "Freelance work", value: "Available for serious projects", icon: MessageCircle },
+  { label: "Project fit", value: "React websites, dashboards, AI chatbots", icon: Workflow },
 ];
 
 export const projectTypes = ["React Website", "AI Chatbot", "Business Website", "Dashboard", "API Integration", "Website Redesign"];

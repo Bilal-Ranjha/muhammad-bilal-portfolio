@@ -2,8 +2,6 @@
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-const root = new URL("../", import.meta.url);
-
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
@@ -25,7 +23,7 @@ async function render() {
   );
 }
 
-test("server renders the portfolio shell", async () => {
+test("server renders the polished portfolio shell", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -33,24 +31,28 @@ test("server renders the portfolio shell", async () => {
   const html = await response.text();
   assert.match(html, /Muhammad Bilal/);
   assert.match(html, /Building Modern Web Experiences and AI Solutions/);
-  assert.match(html, /Frontend Developer/);
+  assert.match(html, /Available for Freelance/);
+  assert.match(html, /Start a focused project conversation/);
   assert.doesNotMatch(html, /Your site is taking shape|codex-preview|react-loading-skeleton/i);
 });
 
-test("portfolio source includes requested sections and reusable data", async () => {
-  const [data, page, readme] = await Promise.all([
+test("portfolio source includes production polish assets and data", async () => {
+  const [data, hero, skills, readme] = await Promise.all([
     readFile(new URL("../data/portfolio.ts", import.meta.url), "utf8"),
-    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../sections/HeroSection.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../sections/SkillsSection.tsx", import.meta.url), "utf8"),
     readFile(new URL("../README.md", import.meta.url), "utf8"),
   ]);
 
-  assert.match(data, /BR Chat AI/);
-  assert.match(data, /MediBook AI/);
-  assert.match(data, /React Business Website/);
-  assert.match(data, /OpenAI API/);
-  assert.match(page, /PortfolioApp/);
-  assert.match(readme, /Add Future Projects/);
+  assert.match(data, /typingRoles/);
+  assert.match(data, /br-chat-ai\.svg/);
+  assert.match(data, /medibook-ai\.svg/);
+  assert.match(hero, /useTypingText/);
+  assert.match(skills, /progress/);
+  assert.match(readme, /Screenshots/);
 
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
   await access(new URL("../public/og.png", import.meta.url));
+  await access(new URL("../public/projects/br-chat-ai.svg", import.meta.url));
+  await access(new URL("../public/projects/medibook-ai.svg", import.meta.url));
 });

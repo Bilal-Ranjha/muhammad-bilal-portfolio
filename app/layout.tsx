@@ -12,10 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Muhammad Bilal | React JS Developer & AI Chatbot Developer";
+const description =
+  "Hire Muhammad Bilal, a frontend developer building responsive React websites, dashboards, API integrations, and AI chatbot automation for businesses.";
+
 export const metadata: Metadata = {
-  title: "Muhammad Bilal | Frontend Developer & AI Chatbot Developer",
-  description:
-    "Professional developer portfolio for Muhammad Bilal, a React JS frontend developer and AI chatbot developer building responsive websites, dashboards, and automation solutions.",
+  title,
+  description,
   keywords: [
     "Muhammad Bilal",
     "Frontend Developer",
@@ -23,22 +26,26 @@ export const metadata: Metadata = {
     "AI Chatbot Developer",
     "MERN Developer",
     "Freelance Web Developer",
+    "Tailwind CSS Developer",
   ],
   authors: [{ name: "Muhammad Bilal" }],
+  creator: "Muhammad Bilal",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Muhammad Bilal | React JS & AI Chatbot Developer",
-    description: "Modern portfolio for responsive React websites, dashboards, API integrations, and AI chatbot systems.",
+    title,
+    description,
     type: "website",
+    siteName: "Muhammad Bilal Portfolio",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Muhammad Bilal developer portfolio" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Bilal | React JS & AI Chatbot Developer",
-    description: "Responsive React applications and AI-powered chatbot solutions for businesses.",
+    title,
+    description,
     images: ["/og.png"],
   },
 };
@@ -52,3 +59,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
+
