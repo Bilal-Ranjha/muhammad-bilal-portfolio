@@ -1,4 +1,4 @@
-﻿import { ArrowUp, GitBranch, Link, Mail } from "lucide-react";
+import { ArrowUp, GitBranch, Link, Mail } from "lucide-react";
 import { navItems } from "@/data/portfolio";
 
 export function Footer() {

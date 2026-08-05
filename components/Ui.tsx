@@ -1,4 +1,4 @@
-﻿import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { ReactNode } from "react";
 
 export function SectionHeader({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) {
@@ -29,7 +29,7 @@ export function PrimaryLink({ href, children }: { href: string; children: ReactN
 
 export function SecondaryLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/6 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-white/10 hover:text-cyan-50 focus:outline-none focus:ring-2 focus:ring-cyan-200" href={href}>
+    <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/[0.06] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-white/10 hover:text-cyan-50 focus:outline-none focus:ring-2 focus:ring-cyan-200" href={href}>
       {children}
     </a>
   );

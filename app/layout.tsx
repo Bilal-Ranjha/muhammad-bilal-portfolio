@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,10 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 const title = "Muhammad Bilal | React JS Developer & AI Chatbot Developer";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 const description =
   "Hire Muhammad Bilal, a frontend developer building responsive React websites, dashboards, API integrations, and AI chatbot automation for businesses.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title,
   description,
   keywords: [
@@ -59,4 +61,3 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
-

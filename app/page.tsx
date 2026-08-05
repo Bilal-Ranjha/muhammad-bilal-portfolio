@@ -1,4 +1,4 @@
-﻿import { PortfolioApp } from "@/components/PortfolioApp";
+import { PortfolioApp } from "@/components/PortfolioApp";
 
 export default function Home() {
   return <PortfolioApp />;

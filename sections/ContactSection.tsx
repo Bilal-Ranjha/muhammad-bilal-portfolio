@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Send } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
@@ -14,7 +14,7 @@ export function ContactSection() {
       <Reveal className="mx-auto max-w-7xl">
         <SectionHeader eyebrow="Contact" title="Start a focused project conversation" text="Share the basics of your project. Placeholder contact links are clearly marked where final profile details are still needed." />
         <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
-          <form className="relative overflow-hidden rounded-xl border border-white/10 bg-white/7 p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8" onSubmit={handleSubmit} noValidate>
+          <form className="relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8" onSubmit={handleSubmit} noValidate>
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent" />
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-sm font-medium text-slate-200">
@@ -53,12 +53,12 @@ export function ContactSection() {
             {submitted ? <p className="mt-4 rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-3 text-sm text-emerald-100">Thanks. The form is validated locally. Connect it to your email, CRM, or backend before accepting live submissions.</p> : null}
           </form>
 
-          <aside className="rounded-xl border border-white/10 bg-white/7 p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8">
+          <aside className="rounded-xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8">
             <h3 className="text-2xl font-semibold text-white">Contact Links</h3>
             <p className="mt-3 text-sm leading-7 text-slate-300">No fake contact information is included. Replace the placeholders when final profiles and email are ready.</p>
             <div className="mt-6 grid gap-3">
               {contactHighlights.map(({ label, value, icon: Icon }) => (
-                <div key={label} className="rounded-lg border border-cyan-300/15 bg-cyan-300/8 p-4">
+                <div key={label} className="rounded-lg border border-cyan-300/15 bg-cyan-300/[0.08] p-4">
                   <div className="flex items-center gap-3 text-sm font-semibold text-cyan-100"><Icon size={18} aria-hidden="true" />{label}</div>
                   <p className="mt-2 text-sm text-slate-300">{value}</p>
                 </div>

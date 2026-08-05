@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { ArrowDown, Camera, MessageSquare, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
@@ -16,7 +16,7 @@ export function HeroSection() {
 
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
         <motion.div initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-300/20 bg-white/6 px-4 py-2 text-sm text-cyan-100 backdrop-blur">
+          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-300/20 bg-white/[0.06] px-4 py-2 text-sm text-cyan-100 backdrop-blur">
             <Sparkles size={16} aria-hidden="true" className="shrink-0" />
             <span className="min-w-0 truncate">Frontend Developer | React JS Developer | AI Chatbot Developer</span>
           </div>
@@ -40,7 +40,7 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1, duration: 0.7 }} className="relative">
-          <div className="rounded-2xl border border-white/12 bg-white/8 p-4 shadow-2xl shadow-cyan-950/40 backdrop-blur-xl">
+          <div className="rounded-2xl border border-white/[0.12] bg-white/[0.08] p-4 shadow-2xl shadow-cyan-950/40 backdrop-blur-xl">
             <div className="rounded-xl border border-white/10 bg-slate-950/80 p-5">
               <div className="mb-5 flex flex-col gap-5 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-4">

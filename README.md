@@ -1,10 +1,11 @@
 ﻿# Muhammad Bilal Portfolio
 
-A production-ready developer portfolio for Muhammad Bilal, focused on freelance clients, Fiverr leads, and frontend or AI chatbot opportunities. The site keeps a premium dark SaaS look with responsive layouts, animated interactions, project previews, and honest placeholder contact details where final profile links are still missing.
+A production-ready developer portfolio for Muhammad Bilal, focused on freelance clients, Fiverr leads, and frontend or AI chatbot opportunities. The site uses a premium dark SaaS style with responsive layouts, animated interactions, project previews, and honest placeholder contact details where final profile links are still missing.
 
 ## Features
 
 - Premium dark SaaS portfolio design
+- Standard Next.js App Router project structure
 - Responsive navbar with mobile menu
 - Hero section with animated typing roles
 - Professional profile photo placeholder
@@ -23,12 +24,12 @@ A production-ready developer portfolio for Muhammad Bilal, focused on freelance 
 
 ## Tech Stack
 
+- Next.js App Router
 - React
 - Tailwind CSS
-- React Router
 - Framer Motion
 - Lucide React icons
-- Vite-powered Sites/Vinext app
+- TypeScript
 
 ## Installation
 
@@ -37,30 +38,31 @@ npm install
 npm run dev
 ```
 
-Open the local URL shown in the terminal. In this workspace the current preview has been running on:
+Open the local URL shown in the terminal. Next.js defaults to:
 
 ```text
-http://127.0.0.1:5173
+http://localhost:3000
 ```
 
 ## Production Build
 
 ```bash
 npm run build
+npm run start
 ```
 
 ## Deployment
 
-### Vercel
+This project is now a standard Next.js project and deploys to Vercel with default settings.
 
-1. Push this project to GitHub.
+1. Push the project to GitHub.
 2. Import the repository in Vercel.
-3. Keep the build command as `npm run build`.
-4. Deploy after the build succeeds.
+3. Keep the framework preset as Next.js.
+4. Use the default install command: `npm install`.
+5. Use the default build command: `npm run build`.
+6. Deploy.
 
-### Sites
-
-This project includes `.openai/hosting.json` for Sites deployment. Build first, then publish through the Sites deployment flow.
+The `engines.node` field requests Node.js 22.13 or newer for compatibility with the installed Next.js and build tooling.
 
 ## Screenshots
 

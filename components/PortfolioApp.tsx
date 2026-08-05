@@ -1,6 +1,5 @@
-﻿"use client";
+"use client";
 
-import { BrowserRouter, MemoryRouter, Route, Routes } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { AboutSection } from "@/sections/AboutSection";
@@ -11,7 +10,7 @@ import { ServicesSection } from "@/sections/ServicesSection";
 import { SkillsSection } from "@/sections/SkillsSection";
 import { TimelineSection } from "@/sections/TimelineSection";
 
-function PortfolioHome() {
+export function PortfolioApp() {
   return (
     <>
       <Navbar />
@@ -26,17 +25,5 @@ function PortfolioHome() {
       </main>
       <Footer />
     </>
-  );
-}
-
-export function PortfolioApp() {
-  const Router = typeof document === "undefined" ? MemoryRouter : BrowserRouter;
-
-  return (
-    <Router>
-      <Routes>
-        <Route path="*" element={<PortfolioHome />} />
-      </Routes>
-    </Router>
   );
 }

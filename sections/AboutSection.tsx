@@ -1,4 +1,4 @@
-﻿import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/Ui";
 
@@ -10,7 +10,7 @@ export function AboutSection() {
       <Reveal className="mx-auto max-w-7xl">
         <SectionHeader eyebrow="About" title="A practical developer for clean interfaces and useful automation" text="I focus on building business-ready web experiences that are easy to use, responsive on every screen, and structured for future growth." />
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-xl border border-white/10 bg-white/7 p-7 backdrop-blur">
+          <div className="rounded-xl border border-white/10 bg-white/[0.07] p-7 backdrop-blur">
             <h3 className="text-2xl font-semibold text-white">Professional Introduction</h3>
             <p className="mt-4 leading-8 text-slate-300">
               Muhammad Bilal is a frontend developer specializing in React JS, Tailwind CSS, responsive layouts, reusable UI components, API integrations, and AI-powered chatbot solutions. His freelance work is centered on helping businesses launch polished websites, improve customer workflows, and turn ideas into dependable digital products.

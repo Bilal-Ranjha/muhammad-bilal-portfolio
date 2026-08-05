@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/Reveal";
@@ -12,7 +12,7 @@ export function SkillsSection() {
         <SectionHeader eyebrow="Skills" title="Focused skills for modern client work" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {skillGroups.map(({ title, skills, progress, icon: Icon }) => (
-            <article key={title} className="group rounded-xl border border-white/10 bg-white/7 p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35 hover:bg-white/[0.09] sm:p-6">
+            <article key={title} className="group rounded-xl border border-white/10 bg-white/[0.07] p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35 hover:bg-white/[0.09] sm:p-6">
               <div className="flex items-center justify-between gap-4">
                 <div className="grid h-12 w-12 place-items-center rounded-lg border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 shadow-lg shadow-cyan-950/20 transition group-hover:scale-105 group-hover:bg-cyan-300/15">
                   <Icon size={24} aria-hidden="true" />
