@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "test": "node --test tests/source.test.mjs",
-    "lint": "eslint . --ignore-pattern .next"
+    "lint": "eslint app components sections data hooks tests --ignore-pattern .next"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",

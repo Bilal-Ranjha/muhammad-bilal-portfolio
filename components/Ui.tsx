@@ -15,9 +15,11 @@ export function Pill({ children }: { children: ReactNode }) {
   return <span className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-sm text-cyan-100 shadow-sm shadow-cyan-950/20 transition hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-cyan-300/15">{children}</span>;
 }
 
-export function PrimaryLink({ href, children }: { href: string; children: ReactNode }) {
+type LinkProps = { href: string; children: ReactNode; target?: "_blank"; className?: string };
+
+export function PrimaryLink({ href, children, target, className }: LinkProps) {
   return (
-    <a className="group relative inline-flex min-h-12 items-center justify-center gap-2 overflow-hidden rounded-lg bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-cyan-400/30 focus:outline-none focus:ring-2 focus:ring-cyan-200" href={href}>
+    <a className={`group relative inline-flex min-h-12 items-center justify-center gap-2 overflow-hidden rounded-lg bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-cyan-400/30 focus:outline-none focus:ring-2 focus:ring-cyan-200 ${className ?? ""}`} href={href} target={target} rel={target === "_blank" ? "noopener noreferrer" : undefined}>
       <span className="absolute inset-y-0 -left-1/2 w-1/2 skew-x-[-18deg] bg-white/35 opacity-0 transition duration-500 group-hover:left-[120%] group-hover:opacity-100" />
       <span className="relative inline-flex items-center gap-2">
         {children}
@@ -27,9 +29,9 @@ export function PrimaryLink({ href, children }: { href: string; children: ReactN
   );
 }
 
-export function SecondaryLink({ href, children }: { href: string; children: ReactNode }) {
+export function SecondaryLink({ href, children, target, className }: LinkProps) {
   return (
-    <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/[0.06] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-white/10 hover:text-cyan-50 focus:outline-none focus:ring-2 focus:ring-cyan-200" href={href}>
+    <a className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/[0.06] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-white/10 hover:text-cyan-50 focus:outline-none focus:ring-2 focus:ring-cyan-200 ${className ?? ""}`} href={href} target={target} rel={target === "_blank" ? "noopener noreferrer" : undefined}>
       {children}
     </a>
   );

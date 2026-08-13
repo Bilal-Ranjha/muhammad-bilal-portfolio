@@ -5,8 +5,8 @@ import { timeline } from "@/data/portfolio";
 export function TimelineSection() {
   return (
     <section id="experience" className="px-5 py-16 sm:py-20 lg:px-8">
-      <Reveal className="mx-auto max-w-5xl">
-        <SectionHeader eyebrow="Experience & Education" title="Practical freelance experience with continued education" />
+      <Reveal className="mx-auto max-w-6xl">
+        <SectionHeader eyebrow="Experience" title="Freelance experience focused on practical web development" />
         <div className="relative grid gap-5 before:absolute before:left-6 before:top-4 before:hidden before:h-[calc(100%-2rem)] before:w-px before:bg-gradient-to-b before:from-cyan-300 before:via-blue-500 before:to-transparent sm:before:block">
           {timeline.map(({ title, meta, points, icon: Icon }, index) => (
             <article key={title} className="relative grid gap-5 rounded-xl border border-white/10 bg-white/[0.07] p-5 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/30 sm:grid-cols-[auto_1fr] sm:p-6 sm:pl-0">

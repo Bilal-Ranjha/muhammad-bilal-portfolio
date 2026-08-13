@@ -4,10 +4,8 @@
   BrainCircuit,
   BriefcaseBusiness,
   Code2,
-  ExternalLink,
   GitBranch,
   Globe2,
-  GraduationCap,
   LayoutDashboard,
   Mail,
   MessageCircle,
@@ -27,7 +25,7 @@ export const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const typingRoles = ["Frontend Developer", "React JS Developer", "AI Chatbot Developer"];
+export const typingRoles = ["React Developer", "Full Stack Developer", "AI Chatbot Developer"];
 
 export const techBadges = ["React", "JavaScript", "Tailwind CSS", "Node.js", "MongoDB", "AI Integration"];
 
@@ -70,6 +68,7 @@ export const projects = [
     screenshotAlt: "BR Chat AI dashboard preview screenshot",
     liveHref: "",
     githubHref: "#contact",
+    githubLabel: "Ask About Project",
     liveLabel: "Live Demo Soon",
     icon: Bot,
   },
@@ -84,6 +83,7 @@ export const projects = [
     screenshotAlt: "MediBook AI appointment platform preview screenshot",
     liveHref: "",
     githubHref: "https://github.com/Bilal-Ranjha/Medibook-ai",
+    githubLabel: "GitHub",
     liveLabel: "Live Demo Soon",
     icon: ShieldCheck,
   },
@@ -98,6 +98,7 @@ export const projects = [
     screenshotAlt: "React business website preview screenshot",
     liveHref: "",
     githubHref: "#contact",
+    githubLabel: "Ask About Project",
     liveLabel: "Live Demo Soon",
     icon: Globe2,
   },
@@ -113,10 +114,9 @@ export const services = [
 ];
 
 export const socialLinks = [
-  { label: "Fiverr", href: "#contact", icon: BadgeDollarSign, note: "Add Fiverr profile URL" },
+  { label: "Fiverr", href: "https://www.fiverr.com/s/WE9qWvB", icon: BadgeDollarSign, note: "Hire Me on Fiverr" },
   { label: "GitHub", href: "https://github.com/Bilal-Ranjha", icon: GitBranch, note: "Bilal-Ranjha" },
-  { label: "LinkedIn", href: "#contact", icon: ExternalLink, note: "Add LinkedIn profile URL" },
-  { label: "Email", href: "mailto:your-email@example.com", icon: Mail, note: "Replace with your email" },
+  { label: "Email", href: "mailto:m.bilalranjha030@gmail.com", icon: Mail, note: "m.bilalranjha030@gmail.com" },
 ];
 
 export const timeline = [
@@ -125,18 +125,6 @@ export const timeline = [
     meta: "October 2022 - Present",
     icon: BriefcaseBusiness,
     points: ["Build responsive interfaces", "Develop React applications", "Integrate APIs", "Create reusable components", "Fix frontend issues", "Deliver client-focused solutions"],
-  },
-  {
-    title: "Matric - Science Group",
-    meta: "Gov't Model High School Jhawarian | March 2021 - April 2023",
-    icon: GraduationCap,
-    points: ["Science group foundation with disciplined academic training."],
-  },
-  {
-    title: "FA",
-    meta: "Allama Iqbal Open University | May 2023 - July 2025",
-    icon: GraduationCap,
-    points: ["Continued education alongside practical web development and freelancing growth."],
   },
 ];
 

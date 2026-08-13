@@ -4,8 +4,8 @@ import { services } from "@/data/portfolio";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="bg-slate-950/60 px-5 py-20 lg:px-8">
-      <Reveal className="mx-auto max-w-7xl">
+    <section id="services" className="bg-slate-950/60 px-5 py-16 sm:py-20 lg:px-8">
+      <Reveal className="mx-auto max-w-[80rem]">
         <SectionHeader eyebrow="Services" title="Freelance services for web and AI projects" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {services.map(({ title, text, icon: Icon }) => (

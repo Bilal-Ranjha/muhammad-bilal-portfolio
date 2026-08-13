@@ -13,7 +13,9 @@ test("portfolio source keeps the production UI content", async () => {
   ]);
 
   assert.match(page, /PortfolioApp/);
-  assert.match(layout, /Muhammad Bilal \| React JS Developer & AI Chatbot Developer/);
+  assert.match(layout, /Bilal Ranjha \| Full Stack & AI Chatbot Developer/);
+  assert.match(data, /m\.bilalranjha030@gmail\.com/);
+  assert.match(data, /https:\/\/www\.fiverr\.com\/s\/WE9qWvB/);
   assert.match(data, /BR Chat AI/);
   assert.match(data, /MediBook AI/);
   assert.match(hero, /useTypingText/);

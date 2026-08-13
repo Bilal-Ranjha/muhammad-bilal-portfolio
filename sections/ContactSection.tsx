@@ -11,8 +11,8 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="bg-slate-950/60 px-5 py-16 sm:py-20 lg:px-8">
-      <Reveal className="mx-auto max-w-7xl">
-        <SectionHeader eyebrow="Contact" title="Start a focused project conversation" text="Share the basics of your project. Placeholder contact links are clearly marked where final profile details are still needed." />
+      <Reveal className="mx-auto max-w-[80rem]">
+        <SectionHeader eyebrow="Contact" title="Start a focused project conversation" text="Share the basics of your project, or get in touch directly through Fiverr, GitHub, or email." />
         <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
           <form className="relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8" onSubmit={handleSubmit} noValidate>
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent" />
@@ -55,20 +55,20 @@ export function ContactSection() {
 
           <aside className="rounded-xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8">
             <h3 className="text-2xl font-semibold text-white">Contact Links</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-300">No fake contact information is included. Replace the placeholders when final profiles and email are ready.</p>
+            <p className="mt-3 text-sm leading-7 text-slate-300">Choose the channel that works best for you. I will reply with the next steps for your project.</p>
             <div className="mt-6 grid gap-3">
               {contactHighlights.map(({ label, value, icon: Icon }) => (
-                <div key={label} className="rounded-lg border border-cyan-300/15 bg-cyan-300/[0.08] p-4">
-                  <div className="flex items-center gap-3 text-sm font-semibold text-cyan-100"><Icon size={18} aria-hidden="true" />{label}</div>
+                <div key={label} className="min-w-0 rounded-lg border border-cyan-300/15 bg-cyan-300/[0.08] p-4">
+                  <div className="flex min-w-0 items-center gap-3 text-sm font-semibold text-cyan-100"><Icon size={18} aria-hidden="true" />{label}</div>
                   <p className="mt-2 text-sm text-slate-300">{value}</p>
                 </div>
               ))}
             </div>
             <div className="mt-6 grid gap-3">
               {socialLinks.map(({ label, href, note, icon: Icon }) => (
-                <a key={label} href={href} className="flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-slate-950/60 p-4 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-slate-900/80">
-                  <span className="flex items-center gap-3 text-sm font-semibold text-white"><Icon size={18} className="text-cyan-300" aria-hidden="true" />{label}</span>
-                  <span className="text-right text-xs text-slate-400">{note}</span>
+                <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="flex min-w-0 items-center justify-between gap-4 rounded-lg border border-white/10 bg-slate-950/60 p-4 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-slate-900/80">
+                  <span className="flex min-w-0 shrink items-center gap-3 text-sm font-semibold text-white"><Icon size={18} className="shrink-0 text-cyan-300" aria-hidden="true" />{label}</span>
+                  <span className="min-w-0 break-all text-right text-xs text-slate-400">{note}</span>
                 </a>
               ))}
             </div>

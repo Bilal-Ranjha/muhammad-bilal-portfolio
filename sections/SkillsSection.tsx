@@ -8,7 +8,7 @@ import { skillGroups } from "@/data/portfolio";
 export function SkillsSection() {
   return (
     <section id="skills" className="bg-slate-950/60 px-5 py-16 sm:py-20 lg:px-8">
-      <Reveal className="mx-auto max-w-7xl">
+      <Reveal className="mx-auto max-w-[80rem]">
         <SectionHeader eyebrow="Skills" title="Focused skills for modern client work" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {skillGroups.map(({ title, skills, progress, icon: Icon }) => (
