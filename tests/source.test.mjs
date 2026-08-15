@@ -28,6 +28,6 @@ test("standard Next project has required public assets", async () => {
   await access(new URL("../public/favicon.svg", import.meta.url));
   await access(new URL("../public/og.png", import.meta.url));
   await access(new URL("../public/projects/br-chat-ai.svg", import.meta.url));
-  await access(new URL("../public/projects/medibook-ai.svg", import.meta.url));
+  await access(new URL("../public/projects/medibook-ai.webp", import.meta.url));
   await access(new URL("../public/projects/tax-wiser.webp", import.meta.url));
 });
