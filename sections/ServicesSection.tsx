@@ -6,7 +6,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="bg-slate-950/60 px-5 py-16 sm:py-20 lg:px-8">
       <Reveal className="mx-auto max-w-[80rem]">
-        <SectionHeader eyebrow="Services" title="Freelance services for web and AI projects" />
+        <SectionHeader eyebrow="Services" title="Web Development & AI Automation Services" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {services.map(({ title, text, icon: Icon }) => (
             <article key={title} className="rounded-xl border border-white/10 bg-white/[0.07] p-6 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/30">

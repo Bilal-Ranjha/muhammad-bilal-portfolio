@@ -10,7 +10,7 @@ export function ProjectsSection() {
       <Reveal className="mx-auto max-w-[80rem]">
         <SectionHeader eyebrow="Projects" title="Selected work built around business outcomes" text="Project cards show the product type, visual preview, core features, and technologies clients need to evaluate quickly." />
         <div className="grid gap-6 lg:grid-cols-3">
-          {projects.map(({ title, type, description, features, technologies, liveHref, liveLabel, githubHref, githubLabel, screenshot, screenshotAlt, icon: Icon }) => (
+          {projects.map(({ title, type, description, features, technologies, liveHref, githubHref, githubLabel, screenshot, screenshotAlt, icon: Icon }) => (
             <article key={title} className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.07] shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35 hover:shadow-cyan-950/30">
               <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-slate-900 via-blue-950 to-cyan-950 p-3 sm:p-4">
                 <Image
@@ -35,11 +35,7 @@ export function ProjectsSection() {
                   {technologies.map((tech) => <span key={tech} className="rounded-md border border-cyan-300/10 bg-cyan-300/10 px-2.5 py-1 text-xs font-medium text-cyan-100 transition group-hover:border-cyan-300/25">{tech}</span>)}
                 </div>
                 <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row sm:flex-wrap">
-                  {liveHref ? (
-                    <a className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-cyan-400 px-4 py-2.5 text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-300" href={liveHref} target="_blank" rel="noopener noreferrer"><Monitor size={16} aria-hidden="true" />Live Demo</a>
-                  ) : (
-                    <button className="inline-flex min-h-11 cursor-not-allowed items-center justify-center gap-2 rounded-lg bg-slate-700/70 px-4 py-2.5 text-sm font-bold text-slate-300" type="button" disabled aria-disabled="true"><Monitor size={16} aria-hidden="true" />{liveLabel}</button>
-                  )}
+                  {liveHref ? <a className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-cyan-400 px-4 py-2.5 text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-300" href={liveHref} target="_blank" rel="noopener noreferrer"><Monitor size={16} aria-hidden="true" />Live Demo</a> : null}
                   <a className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/[0.12] px-4 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-white/[0.08]" href={githubHref} target={githubHref.startsWith("http") ? "_blank" : undefined} rel={githubHref.startsWith("http") ? "noopener noreferrer" : undefined}>
                     {githubLabel === "GitHub" ? <GitBranch size={16} aria-hidden="true" /> : <MessageCircle size={16} aria-hidden="true" />}
                     {githubLabel}

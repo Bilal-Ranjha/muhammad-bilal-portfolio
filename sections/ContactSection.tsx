@@ -7,12 +7,12 @@ import { contactHighlights, projectTypes, socialLinks } from "@/data/portfolio";
 import { useContactForm } from "@/hooks/useContactForm";
 
 export function ContactSection() {
-  const { values, errors, submitted, updateField, handleSubmit } = useContactForm();
+  const { values, errors, emailDraftReady, updateField, handleSubmit } = useContactForm();
 
   return (
     <section id="contact" className="bg-slate-950/60 px-5 py-16 sm:py-20 lg:px-8">
       <Reveal className="mx-auto max-w-[80rem]">
-        <SectionHeader eyebrow="Contact" title="Start a focused project conversation" text="Share the basics of your project, or get in touch directly through Fiverr, GitHub, or email." />
+        <SectionHeader eyebrow="Contact" title="Let's Build Something Useful" text="Share the basics of your project or contact me directly through Fiverr, GitHub, or email." />
         <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
           <form className="relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8" onSubmit={handleSubmit} noValidate>
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent" />
@@ -50,7 +50,7 @@ export function ContactSection() {
               <Send size={17} aria-hidden="true" className="transition group-hover:translate-x-0.5" />
               Submit Project Inquiry
             </button>
-            {submitted ? <p className="mt-4 rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-3 text-sm text-emerald-100">Thanks. The form is validated locally. Connect it to your email, CRM, or backend before accepting live submissions.</p> : null}
+            {emailDraftReady ? <p className="mt-4 rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-3 text-sm text-cyan-100" role="status">Your email client should open with the enquiry details prepared. If it does not, please use the direct email link.</p> : null}
           </form>
 
           <aside className="rounded-xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-black/20 backdrop-blur sm:p-8">

@@ -5,7 +5,6 @@
   BriefcaseBusiness,
   Code2,
   GitBranch,
-  Globe2,
   LayoutDashboard,
   Mail,
   MessageCircle,
@@ -25,7 +24,7 @@ export const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const typingRoles = ["React Developer", "Full Stack Developer", "AI Chatbot Developer"];
+export const typingRoles = ["React Developer", "AI Chatbot Developer", "Full-Stack Developer", "Business Automation Developer"];
 
 export const techBadges = ["React", "JavaScript", "Tailwind CSS", "Node.js", "MongoDB", "AI Integration"];
 
@@ -33,30 +32,40 @@ export const skillGroups = [
   {
     title: "Frontend",
     icon: Code2,
-    progress: 92,
     skills: ["HTML", "CSS", "JavaScript", "React JS", "Next.js", "Tailwind CSS", "Bootstrap", "TypeScript"],
   },
   {
     title: "Backend & APIs",
     icon: ServerCog,
-    progress: 78,
     skills: ["Node.js", "Express.js", "REST APIs", "MongoDB", "JWT Authentication"],
   },
   {
     title: "AI & Automation",
     icon: BrainCircuit,
-    progress: 84,
     skills: ["OpenAI API", "AI Chatbots", "ManyChat", "Lead Capture Automation", "Business Workflow Automation"],
   },
   {
     title: "Tools",
     icon: LayoutDashboard,
-    progress: 88,
     skills: ["Git", "GitHub", "VS Code", "Postman", "Vercel"],
   },
 ];
 
 export const projects = [
+  {
+    title: "Tax Wiser",
+    type: "Tax & Accounting Business Website",
+    description:
+      "A responsive tax and accounting website with a professional service-focused interface, clear calls to action, and a contact enquiry experience.",
+    features: ["Responsive business website", "Tax and accounting service presentation", "Contact enquiry interface", "Mobile navigation", "SEO metadata"],
+    technologies: ["React", "TypeScript", "Vite", "CSS", "Vercel"],
+    screenshot: "/projects/tax-wiser.webp",
+    screenshotAlt: "Tax Wiser tax and accounting website homepage preview",
+    liveHref: "https://tax-wiser-website.vercel.app",
+    githubHref: "https://github.com/Bilal-Ranjha/tax-wiser-website",
+    githubLabel: "GitHub",
+    icon: BriefcaseBusiness,
+  },
   {
     title: "BR Chat AI",
     type: "Full-Stack AI Chatbot Platform",
@@ -66,47 +75,28 @@ export const projects = [
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "OpenAI API", "Tailwind CSS"],
     screenshot: "/projects/br-chat-ai.svg",
     screenshotAlt: "BR Chat AI dashboard preview screenshot",
-    liveHref: "",
     githubHref: "#contact",
     githubLabel: "Ask About Project",
-    liveLabel: "Live Demo Soon",
     icon: Bot,
   },
   {
     title: "MediBook AI",
     type: "MERN Healthcare Appointment Platform",
     description:
-      "A full-stack healthcare appointment platform with secure registration, login, doctor listings, appointment booking, protected routes, and MongoDB Atlas integration.",
+      "A full-stack healthcare appointment platform with user registration, authentication, doctor listings, appointment booking, protected routes, backend APIs, and database integration.",
     features: ["User authentication", "Doctor listings", "Appointment booking", "Protected routes", "MongoDB Atlas", "Responsive healthcare UI"],
     technologies: ["React", "Node.js", "Express", "MongoDB Atlas", "JWT", "Tailwind CSS"],
     screenshot: "/projects/medibook-ai.svg",
     screenshotAlt: "MediBook AI appointment platform preview screenshot",
-    liveHref: "",
     githubHref: "https://github.com/Bilal-Ranjha/Medibook-ai",
     githubLabel: "GitHub",
-    liveLabel: "Live Demo Soon",
     icon: ShieldCheck,
-  },
-  {
-    title: "React Business Website",
-    type: "Responsive Business Website",
-    description:
-      "A modern React business website with responsive design, reusable components, contact forms, and clean UI for service-focused businesses.",
-    features: ["Reusable sections", "Contact forms", "Responsive layout", "Clean UI", "Fast loading"],
-    technologies: ["React", "Tailwind CSS", "JavaScript"],
-    screenshot: "/projects/react-business-website.svg",
-    screenshotAlt: "React business website preview screenshot",
-    liveHref: "",
-    githubHref: "#contact",
-    githubLabel: "Ask About Project",
-    liveLabel: "Live Demo Soon",
-    icon: Globe2,
   },
 ];
 
 export const services = [
   { title: "React JS Website Development", text: "Modern React websites with reusable components, polished UI, and performance-minded structure.", icon: Code2 },
-  { title: "AI Chatbot Development", text: "Business chatbot systems for support, lead capture, FAQs, and workflow automation.", icon: Bot },
+  { title: "AI Chatbot Development", text: "Business chatbot solutions for websites, customer support, lead capture, FAQs, and practical workflow automation.", icon: Bot },
   { title: "Business Website Development", text: "Responsive websites for service businesses, startups, personal brands, and local companies.", icon: BriefcaseBusiness },
   { title: "API Integration", text: "Connect frontends with REST APIs, dashboards, authentication, and third-party services.", icon: Workflow },
   { title: "Responsive UI Development", text: "Accessible interfaces that look sharp on desktop, tablet, and mobile screens.", icon: Sparkles },

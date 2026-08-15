@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Bilal Ranjha | Full Stack & AI Chatbot Developer";
+const title = "Bilal Ranjha | React Developer & AI Chatbot Developer";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 const description =
-  "Bilal Ranjha is a React and full-stack developer building responsive websites, API integrations, WhatsApp bots, and AI chatbot automation for businesses.";
+  "Portfolio of Bilal Ranjha, a React developer and AI chatbot developer building responsive websites, business applications, API integrations, and automation solutions.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -13,11 +13,10 @@ export const metadata: Metadata = {
   keywords: [
     "Bilal Ranjha",
     "React Developer",
-    "Full Stack Developer",
+    "Frontend Developer",
     "AI Chatbot Developer",
-    "WhatsApp Bot Developer",
-    "Web Developer",
-    "API Integration",
+    "Website Development",
+    "Business Automation",
   ],
   authors: [{ name: "Bilal Ranjha" }],
   creator: "Bilal Ranjha",

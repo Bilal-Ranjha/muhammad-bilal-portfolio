@@ -2,7 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/Ui";
 
-const strengths = ["Frontend development", "React JS", "Responsive design", "API integration", "AI chatbot development", "Freelancing experience"];
+const strengths = ["Frontend development", "React JS", "Responsive design", "API integration", "AI chatbot development", "Business Automation"];
 
 export function AboutSection() {
   return (
@@ -11,9 +11,9 @@ export function AboutSection() {
         <SectionHeader eyebrow="About" title="A practical developer for clean interfaces and useful automation" text="I focus on building business-ready web experiences that are easy to use, responsive on every screen, and structured for future growth." />
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-xl border border-white/10 bg-white/[0.07] p-7 backdrop-blur">
-            <h3 className="text-2xl font-semibold text-white">Professional Introduction</h3>
+            <h3 className="text-2xl font-semibold text-white">About Me</h3>
             <p className="mt-4 leading-8 text-slate-300">
-              Bilal Ranjha is a developer specializing in React, full-stack applications, responsive layouts, reusable UI components, API integrations, and AI-powered chatbot solutions. His freelance work is centered on helping businesses launch polished websites, improve customer workflows, and turn ideas into dependable digital products.
+              Bilal Ranjha builds responsive web applications, business websites, API-powered solutions, and AI chatbot systems. His work focuses on clean user experiences, practical automation, and reliable digital products that help businesses improve customer communication and everyday workflows.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

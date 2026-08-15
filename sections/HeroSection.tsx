@@ -34,7 +34,7 @@ export function HeroSection() {
           <div className="mt-8 flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
             <PrimaryLink href="#projects" className="w-full sm:w-auto">View Projects</PrimaryLink>
             <SecondaryLink href="#contact" className="w-full sm:w-auto">Contact Me</SecondaryLink>
-            <SecondaryLink href="https://www.fiverr.com/s/WE9qWvB" target="_blank" className="w-full sm:w-auto">Hire Me on Fiverr</SecondaryLink>
+            <SecondaryLink href="#contact" className="w-full sm:w-auto">Work With Me</SecondaryLink>
           </div>
           <div className="mt-8 flex min-w-0 flex-wrap gap-2.5" aria-label="Technology badges">
             {techBadges.map((badge) => <Pill key={badge}>{badge}</Pill>)}

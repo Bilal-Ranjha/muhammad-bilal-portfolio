@@ -21,12 +21,12 @@ const initialState: FormState = {
 export function useContactForm() {
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState<Partial<FormState>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [emailDraftReady, setEmailDraftReady] = useState(false);
 
   function updateField(name: keyof FormState, value: string) {
     setValues((current) => ({ ...current, [name]: value }));
     setErrors((current) => ({ ...current, [name]: undefined }));
-    setSubmitted(false);
+    setEmailDraftReady(false);
   }
 
   function validate() {
@@ -43,9 +43,20 @@ export function useContactForm() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!validate()) return;
-    setSubmitted(true);
+    const subject = `Portfolio enquiry: ${values.projectType}`;
+    const body = [
+      `Name: ${values.name.trim()}`,
+      `Email: ${values.email.trim()}`,
+      `Project type: ${values.projectType}`,
+      `Budget: ${values.budget.trim()}`,
+      "",
+      "Project details:",
+      values.message.trim(),
+    ].join("\n");
+    window.location.href = `mailto:m.bilalranjha030@gmail.com?${new URLSearchParams({ subject, body }).toString()}`;
+    setEmailDraftReady(true);
     setValues(initialState);
   }
 
-  return { values, errors, submitted, updateField, handleSubmit };
+  return { values, errors, emailDraftReady, updateField, handleSubmit };
 }
