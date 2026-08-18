@@ -4,7 +4,6 @@
   BrainCircuit,
   BriefcaseBusiness,
   Code2,
-  GitBranch,
   LayoutDashboard,
   Mail,
   MessageCircle,
@@ -14,6 +13,7 @@
   Sparkles,
   Workflow,
 } from "lucide-react";
+import { LinkedInIcon } from "@/components/SocialIcons";
 
 export const navItems = [
   { label: "Home", href: "#home" },
@@ -21,7 +21,6 @@ export const navItems = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export const typingRoles = ["React Developer", "AI Chatbot Developer", "Full-Stack Developer", "Business Automation Developer"];
@@ -104,8 +103,8 @@ export const services = [
 ];
 
 export const socialLinks = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-bilal-ranjha030", icon: LinkedInIcon, note: "Muhammad Bilal Ranjha" },
   { label: "Fiverr", href: "https://www.fiverr.com/s/WE9qWvB", icon: BadgeDollarSign, note: "Hire Me on Fiverr" },
-  { label: "GitHub", href: "https://github.com/Bilal-Ranjha", icon: GitBranch, note: "Bilal-Ranjha" },
   { label: "Email", href: "mailto:m.bilalranjha030@gmail.com", icon: Mail, note: "m.bilalranjha030@gmail.com" },
 ];
 

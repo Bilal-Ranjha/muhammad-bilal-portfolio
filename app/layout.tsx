@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Bilal Ranjha" }],
   creator: "Bilal Ranjha",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: "/icon.svg",
+    apple: "/apple-icon.svg",
   },
   openGraph: {
     title,

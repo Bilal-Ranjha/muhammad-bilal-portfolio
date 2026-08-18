@@ -1,6 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/Footer";
+import { FloatingProjectChat } from "@/components/FloatingProjectChat";
 import { Navbar } from "@/components/Navbar";
 import { AboutSection } from "@/sections/AboutSection";
 import { ContactSection } from "@/sections/ContactSection";
@@ -24,6 +25,7 @@ export function PortfolioApp() {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingProjectChat />
     </>
   );
 }
