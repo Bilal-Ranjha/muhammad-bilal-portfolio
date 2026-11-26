@@ -1,27 +1,27 @@
-"use client";
-
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingProjectChat } from "@/components/FloatingProjectChat";
-import { Navbar } from "@/components/Navbar";
-import { AboutSection } from "@/sections/AboutSection";
-import { ContactSection } from "@/sections/ContactSection";
 import { HeroSection } from "@/sections/HeroSection";
+import { AboutSection } from "@/sections/AboutSection";
 import { ProjectsSection } from "@/sections/ProjectsSection";
 import { ServicesSection } from "@/sections/ServicesSection";
 import { SkillsSection } from "@/sections/SkillsSection";
-import { TimelineSection } from "@/sections/TimelineSection";
-
+import { ProcessSection } from "@/sections/ProcessSection";
+import { ContactSection } from "@/sections/ContactSection";
 export function PortfolioApp() {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
         <ProjectsSection />
         <ServicesSection />
-        <TimelineSection />
+        <SkillsSection />
+        <ProcessSection />
         <ContactSection />
       </main>
       <Footer />
