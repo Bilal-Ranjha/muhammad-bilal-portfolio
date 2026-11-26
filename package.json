@@ -6,16 +6,19 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
-    "test": "node --test tests/source.test.mjs",
-    "lint": "eslint app components sections data hooks tests --ignore-pattern .next"
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "lint": "eslint app components sections data hooks lib tests scripts --ignore-pattern .next",
+    "typecheck": "tsc --noEmit --incremental false",
+    "branding": "node scripts/generate-branding.mjs"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^2.2.0",
     "framer-motion": "^12.43.0",
     "lucide-react": "^1.28.0",
-    "next": "16.2.6",
+    "next": "16.4.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },
@@ -25,7 +28,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.4",
-    "eslint-config-next": "16.2.6",
+    "eslint-config-next": "16.4.6",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
   },

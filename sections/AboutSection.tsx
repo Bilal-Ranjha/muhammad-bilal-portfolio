@@ -1,28 +1,50 @@
-import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeader } from "@/components/Ui";
-
-const strengths = ["Frontend development", "React JS", "Responsive design", "API integration", "AI chatbot development", "Business Automation"];
-
 export function AboutSection() {
   return (
-    <section id="about" className="bg-[#111111] px-5 py-14 sm:py-16 lg:px-8">
-      <Reveal className="mx-auto max-w-[80rem]">
-        <SectionHeader eyebrow="About" title="A practical developer for clean interfaces and useful automation" text="I focus on building business-ready web experiences that are easy to use, responsive on every screen, and structured for future growth." />
-        <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-          <div className="rounded-xl border border-zinc-800 bg-[#181818] p-7 shadow-sm sm:p-8">
-            <h3 className="text-[1.7rem] font-semibold text-white">About Me</h3>
-            <p className="mt-4 text-[1.05rem] leading-8 text-zinc-400">
-              Bilal Ranjha builds responsive web applications, business websites, API-powered solutions, and AI chatbot systems. His work focuses on clean user experiences, practical automation, and reliable digital products that help businesses improve customer communication and everyday workflows.
-            </p>
+    <section id="about" className="section about-section">
+      <Reveal className="container editorial-split">
+        <div>
+          <p className="eyebrow">The person behind the code</p>
+          <h2>About Me</h2>
+          <div className="about-person">
+            <Image
+              src="/bilal.jpg"
+              alt="Bilal Ranjha"
+              width={96}
+              height={96}
+            />
+            <div>
+              <strong>Bilal Ranjha</strong>
+              <span>
+                Full-Stack Developer
+                <br />& AI Solutions Developer
+              </span>
+            </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {strengths.map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-[#181818] p-5 shadow-sm">
-                <CheckCircle2 className="shrink-0 text-[#ff4d4f]" size={20} aria-hidden="true" />
-                <span className="text-sm font-medium text-zinc-200">{item}</span>
-              </div>
-            ))}
+        </div>
+        <div className="about-copy">
+          <h3>I turn ambitious ideas into functional digital products.</h3>
+          <p>
+            I work across the interface, application logic and database to build
+            software that makes sense for the people using it. My focus spans
+            full-stack web development, SaaS applications, AI integrations and
+            business websites.
+          </p>
+          <p>
+            I approach each project by understanding the problem first, then
+            choosing a practical architecture. Clear user journeys, maintainable
+            code and reliable integrations guide the decisions from the first
+            screen to deployment.
+          </p>
+          <p id="experience" className="experience-note">
+            Freelance development since October 2022, with a focus on responsive
+            interfaces, API integrations and practical client requirements.
+          </p>
+          <div className="about-principles">
+            <span>Practical problem-solving</span>
+            <span>Maintainable architecture</span>
+            <span>Thoughtful user experience</span>
           </div>
         </div>
       </Reveal>

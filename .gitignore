@@ -40,3 +40,18 @@ yarn-error.log*
 
 # typescript
 next-env.d.ts
+
+*.tsbuildinfo
+
+# Local review artifacts, backups and temporary files
+/review/
+/backups/
+/completed-source-backup/
+/portfolio-backup-*/
+/deployment-prep-*/
+/tmp/
+/temp/
+*.tmp
+*.bak
+*.key
+*.p12
